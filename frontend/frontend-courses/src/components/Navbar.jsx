@@ -6,7 +6,7 @@ function Navbar() {
 
 
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="#">Classroom</a>
+            <a className="navbar-brand" href="/">Classroom</a>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
