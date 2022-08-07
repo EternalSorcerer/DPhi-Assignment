@@ -15,6 +15,12 @@ function Navbar() {
                     <li className="nav-item">
                         <a className="nav-link" href="#">Student</a>
                     </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/courses">Courses</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/add-course">Add Course</a>
+                    </li>
                 </ul>
             </div>
         </nav>
