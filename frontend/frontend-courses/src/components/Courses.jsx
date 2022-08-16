@@ -13,8 +13,8 @@ const Courses = () => {
    }, [])
     return (
         <div className="courses">
-            <h1>See all the available courses here!</h1>
-            <div className="container-fluid ">
+            <h3>See all the available courses here!</h3>
+            <div className="container ">
                 <div className="row">
                     {data.map(data => {
                         return (
@@ -31,7 +31,7 @@ const Courses = () => {
                                 </ul>
                                 <div className="card-body">
                                     <a href="#" type="submit" className="btn btn-primary">View </a>
-                                    <a href="#" type="submit" className="btn btn-secondary mx-3">Enroll in course</a>
+                                    <a href="#" type="submit" className="btn btn-success mx-3">Enroll in course</a>
                                 </div>
                             </div>
                         )

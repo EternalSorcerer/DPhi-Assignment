@@ -35,8 +35,8 @@ const Login = ({loggedin}) => {
             token.set('token', res.data.token, {path: '/', maxAge:604800 })
             console.log(res);
             loggedin = true;
-            // console.log(loggedin);
-            window.location = "/";
+            console.log(loggedin);
+            window.location = "/courses";
         })
         .catch(() => setError("Please log in again using proper credentials!"))
 

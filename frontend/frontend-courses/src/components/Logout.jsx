@@ -7,7 +7,7 @@ const Logout = ({loggedin}) => {
         token.remove('token');
         loggedin = false;
         // console.log(loggedin);
-        // window.location = "/";
+        window.location = "/";
     }, [])
     return(
         <h1>Loading...</h1>
