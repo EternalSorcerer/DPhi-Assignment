@@ -26,4 +26,39 @@ class Student(models.Model):
 
     def __str__(self):
         return f"Student {self.name} enrolled in {self.enrolled_courses} courses"
-    
+
+
+class Category(models.Model):
+    """ Category is category of the particular quiz"""
+    name = models.CharField(max_length = 100)
+
+    def __str__(self):
+        return self.name
+
+class Quizzes(models.Model):
+    """
+    Many quiz belongs to one category
+     """
+    name = models.CharField(max_length = 100)
+
+    # many quizzes can belong to one category 
+    category = models.ForeignKey(Category, default = 1, on_delete = models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+class Question(models.Model):
+    # One question can be part of many quizzes
+    quiz = models.ForeignKey(Quizzes, related_name='question', on_delete=models.CASCADE)
+    name = models.CharField(max_length = 100)
+
+    def __str__(self):
+        return self.name
+
+class Answer(models.Model):
+    question = models.ForeignKey(Question, related_name='answer', on_delete = models.CASCADE)
+    answer = models.CharField(max_length = 100)
+    is_right = models.BooleanField(default = False)
+
+    def __str__(self):
+        return f"{self.answer} {self.question}"   

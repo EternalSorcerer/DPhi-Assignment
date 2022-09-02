@@ -27,3 +27,17 @@ class CoursesSerializer(serializers.ModelSerializer):
         return course
 
 
+
+class QuizSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Quizzes
+        fields = '__all__'
+
+class QuestionSerializer(serializers.ModelSerializer):
+    # quiz = QuizSerializer(read_only = True)
+    class Meta:
+        model = Question 
+        fields = '__all__'
+
+
